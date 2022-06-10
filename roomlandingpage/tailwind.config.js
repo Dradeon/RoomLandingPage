@@ -12,12 +12,7 @@ module.exports = {
       'VeryDarkGray': 'hsl(0, 0%, 27%)',
     },
     backgroundImage:{
-      'mobile-image-hero-1': 'url(/mobile-image-hero-1.jpg)',
-      'mobile-image-hero-2': 'url(/mobile-image-hero-2.jpg)',
-      'mobile-image-hero-3': 'url(/mobile-image-hero-3.jpg)',
-      'desktop-image-hero-1': 'url(/desktop-image-hero-1.jpg)',
-      'desktop-image-hero-2': 'url(/desktop-image-hero-2.jpg)',
-      'desktop-image-hero-3': 'url(/desktop-image-hero-3.jpg)',
+
     },
     extend: {
       screens:{

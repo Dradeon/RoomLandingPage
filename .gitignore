@@ -1,0 +1,33 @@
+# dependencies
+/roomlandingpage/node_modules
+/roomlandingpage/.pnp
+/roomlandingpage.pnp.js
+
+# testing
+/roomlandingpage/coverage
+
+# next.js
+/roomlandingpage/.next/
+/roomlandingpage/out/
+
+# production
+/roomlandingpage/build
+
+# misc
+/roomlandingpage/.DS_Store
+*.pem
+
+# debug
+/roomlandingpage/npm-debug.log*
+/roomlandingpage/yarn-debug.log*
+/roomlandingpage/yarn-error.log*
+/roomlandingpage/.pnpm-debug.log*
+
+# local env files
+/roomlandingpage/.env*.local
+
+# vercel
+/roomlandingpage/.vercel
+
+# typescript
+*.tsbuildinfo

@@ -1,29 +1,60 @@
-import React from 'react'
+import React, { SyntheticEvent, useState } from 'react'
 
 
 
 const Section1 = () => {
+  const [index,setIndex] = useState(1);
+
+  const switchIndex = (e: SyntheticEvent) => {
+
+    const buttonPressed = e.currentTarget.getAttribute('id')
+
+    const mobile = document.getElementById('mobilebg');
+    const desktop = document.getElementById('desktopbg');
+
+    if(index && mobile && desktop && buttonPressed){
+        if(index >= 3 && buttonPressed == 'right'){
+            setIndex(1);
+        }
+        else if(index <= 1 && buttonPressed == 'left'){
+            setIndex(3);
+        }
+        else{
+            if(buttonPressed == 'left'){
+                setIndex(index-1);
+            }
+            else{
+                setIndex(index+1);
+            }
+        }
+        mobile.setAttribute('src',`mobile-image-hero-${String(index)}.jpg`);
+        desktop.setAttribute('src',`desktop-image-hero-${String(index)}.jpg`);
+        
+    }
+  };
+
   const hamburgerClick = () => {
-    const icon = document.getElementById("hamburger");
-    const nav = document.getElementById('nav');
-    const logo = document.getElementById('weblogo');
-    const links = document.getElementById('links');
-    
-    if(icon?.getAttribute('src') == 'icon-hamburger.svg'){
-        icon.setAttribute('src','icon-close.svg');
+        const icon = document.getElementById("hamburger");
+        const nav = document.getElementById('nav');
+        const logo = document.getElementById('weblogo');
+        const links = document.getElementById('links');
+        
+        if(icon?.getAttribute('src') == 'icon-hamburger.svg'){
+            icon.setAttribute('src','icon-close.svg');
 
-        nav?.setAttribute('style','background-color:white;width:100%;')
-        logo?.setAttribute('style','display:none');
-        links?.setAttribute('style','display:flex;color:black;margin-right:1rem;')
+            nav?.setAttribute('style','background-color:white;width:100%;')
+            logo?.setAttribute('style','display:none');
+            links?.setAttribute('style','display:flex;color:black;margin-right:1rem;')
 
-    }
-    else{
-        icon?.setAttribute('src','icon-hamburger.svg');
-        nav?.setAttribute('style','background-color:none;')
-        logo?.setAttribute('style','display:block');
-        links?.setAttribute('style','display:none;color:white;')
-    }
-};   
+        }
+        else{
+            icon?.setAttribute('src','icon-hamburger.svg');
+            nav?.setAttribute('style','background-color:none;')
+            logo?.setAttribute('style','display:block');
+            links?.setAttribute('style','display:none;color:white;')
+        }
+    };   
+
   return (
     <div className='flex flex-col w-full sm:flex-row '>
         <div id="section1-background" className='relative min-h-[22.5rem] w-full max-w-[840px]'>
@@ -38,11 +69,11 @@ const Section1 = () => {
                 </ul>
             </nav>
             <div className='absolute flex bottom-0 left-[calc(100%-92px)] custom2:left-full'>
-                <img src='icon-angle-left.svg'  className='bg-Black  p-4 '></img>
-                <img src='icon-angle-right.svg' className='bg-Black  p-4 '></img>
+                <img id='left' src='icon-angle-left.svg' onClick={switchIndex}  className='bg-Black  p-4 hover:cursor-pointer'></img>
+                <img id='right' src='icon-angle-right.svg' onClick={switchIndex} className='bg-Black  p-4 hover:cursor-pointer'></img>
             </div>
-            <img src='mobile-image-hero-1.jpg' className='-z-10 w-full h-[inherit] max-h-[534px] sm:hidden'></img>
-            <img src='desktop-image-hero-1.jpg' className='hidden sm:block -z-10'></img>
+            <img id = 'mobilebg' src='mobile-image-hero-1.jpg' className='-z-10 w-full h-[inherit] max-h-[534px] sm:hidden'></img>
+            <img id = 'desktopbg' src='desktop-image-hero-1.jpg' className='hidden sm:block -z-10'></img>
         </div>
         <section className='flex flex-col place-content-center space-y-4 p-8 mx-auto max-h-[534px] max-w-lg sm:ml-16 sm:w-1/2'>
             <h1 className='font-spartan font-bold text-4xl sm:text-5xl'>Discover innovative ways to decorate</h1>

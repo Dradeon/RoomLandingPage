@@ -100,7 +100,7 @@ const Section1 = () => {
                 <img id='right' src='icon-angle-right.svg' onClick={switchIndex} className='bg-Black  p-4 hover:cursor-pointer sm:p-8 hover:bg-VeryDarkGray' alt = "Right Arrow"></img>
             </div>
             <img id = 'mobilebg' src='mobile-image-hero-1.jpg' className='-z-10 w-full h-[inherit] max-h-[534px] sm:hidden' alt='Mobile Background'></img>
-            <img id = 'desktopbg' src='desktop-image-hero-1.jpg' className='hidden sm:block -z-10' alt="Desktop Background"></img>
+            <img id = 'desktopbg' src='desktop-image-hero-1.jpg' className='hidden sm:block min-h-[534px] -z-10' alt="Desktop Background"></img>
         </div>
         <section className='flex flex-col place-content-center space-y-4 p-8 mx-auto max-h-[534px] max-w-lg sm:ml-16 sm:w-1/2'>
             <h1 className='font-spartan font-semibold text-4xl sm:text-5xl'>Discover innovative ways to decorate</h1>

@@ -73,9 +73,9 @@ const Section1 = () => {
   return (
     <div className='flex flex-col w-full sm:flex-row '>
         <div id="section1-background" className='relative min-h-[22.5rem] w-full max-w-[840px]'>
-            <nav id = 'nav' className='absolute w-[calc(50%+32px)] flex flow-row items-center justify-between py-8 pl-6 custom2:justify-start'>
+            <nav id = 'nav' className='absolute w-[calc(50%+32px)] flex flow-row items-center justify-between py-8 pl-6 md:justify-start'>
                 <img id="hamburger" onClick={hamburgerClick} src='icon-hamburger.svg' className='hover:cursor-pointer sm:hidden'></img>
-                <h1 id = 'weblogo' className='font-spartan text-3xl text-White md:mr-12'>room</h1>
+                <h1 id = 'weblogo' className='font-spartan text-3xl text-White md:mr-16'>room</h1>
                 <ul id = 'links' className='hidden font-spartan text-md text-White md:flex flex-row flex-nowrap space-x-8 '>
                     <li className='relative'>
                         <a href='#' className='pb-2 peer'>home</a>
@@ -105,8 +105,8 @@ const Section1 = () => {
         <section className='flex flex-col place-content-center space-y-4 p-8 mx-auto max-h-[534px] max-w-lg sm:ml-16 sm:w-1/2'>
             <h1 className='font-spartan font-semibold text-4xl sm:text-5xl'>Discover innovative ways to decorate</h1>
             <p className='font-spartan text-sm text-DarkGray sm:text-md'>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
-            <a href='#' className='inline-block space-x-4' onMouseOver={changeSVGToGray} onMouseLeave={changeSVGToBlack}>
-                <span className='peer text-sm font-spartan tracking-[.75rem] hover:text-DarkGray'>SHOP NOW</span>
+            <a href='#' className='inline-block space-x-4 hover:text-DarkGray' onMouseOver={changeSVGToGray} onMouseLeave={changeSVGToBlack}>
+                <span className='peer text-sm font-spartan tracking-[.75rem]'>SHOP NOW</span>
                 <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path id = 'arrow' d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
             </a>
             

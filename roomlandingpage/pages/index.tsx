@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Section1></Section1>
       <Section2></Section2>
       <footer className='flex justify-center relative sm:fixed sm:bottom-0 sm:left-[calc(50%-15px)] mx-auto text-center text-xl font-spartan font-bold p-4'>
-        <a href='https://github.com/Dradeon/RoomLandingPage' target={'_blank'} rel='noopener' ><FaGithub size={'30px'}/></a>
+        <a href='https://github.com/Dradeon/RoomLandingPage' target={'_blank'} rel='noreferrer' ><FaGithub size={'30px'}/></a>
       </footer>
     </div>
   )
